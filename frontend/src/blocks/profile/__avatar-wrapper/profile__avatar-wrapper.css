@@ -1,0 +1,17 @@
+.profile__avatar-wrapper{
+    margin-right: 30px;
+    position: relative;
+}
+.profile__avatar-wrapper:hover::after{
+    content: "";
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url("../../../images/editPencil.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+}

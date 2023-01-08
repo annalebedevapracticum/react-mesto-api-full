@@ -1,0 +1,15 @@
+.login__entry {
+    padding: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    background-color: black;
+    margin-top: 15px;
+    border: none;
+}
+
+.login__entry:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}

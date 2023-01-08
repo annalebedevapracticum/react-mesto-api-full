@@ -1,0 +1,15 @@
+.header__action-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    background: none;
+    border: none;
+}
+
+.header__action-text:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}

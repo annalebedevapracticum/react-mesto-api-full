@@ -1,0 +1,17 @@
+.footer {
+    font-size: 18px;
+    line-height: 22px;
+    color: #545454;
+    margin-top: 67px;
+    padding-bottom: 60px;
+}
+
+@media screen and (max-width: 767px) {
+    .footer {
+        margin-top: 48px;
+        padding-bottom: 36px;
+        margin-left: 19px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
