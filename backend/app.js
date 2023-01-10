@@ -5,10 +5,19 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const { errors } = require('celebrate');
+const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
 const process = require('process');
 const routes = require('./routes/index');
 const { handleErrors } = require('./middlewares/handleErrors');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100,
+  standardHeaders: true,
+  legacyHeaders: false,
+});
 
 const { PORT = 3000 } = process.env;
 const app = express();
@@ -18,6 +27,8 @@ process.on('uncaughtException', (err, origin) => {
 });
 
 app.use(cors());
+app.use(helmet());
+app.use(limiter);
 app.use(bodyParser.json());
 app.use(cookieParser());
 
